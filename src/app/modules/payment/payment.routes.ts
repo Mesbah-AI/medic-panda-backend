@@ -1,0 +1,29 @@
+import { Router } from 'express';
+import auth from '../../middlewares/auth';
+import { USER_ROLE } from '../user/user.constant';
+import { paymentController } from './payment.controller';
+
+const router = Router();
+
+router.post('/success-payment', paymentController.successPaymentController);
+
+router.post('/success-cancel', paymentController.cancelPaymentController);
+
+router.post(
+  '/success-payment/failed-payment',
+  paymentController.failedPaymentController,
+);
+
+router.post(
+  '/pay-now/:id',
+  auth(USER_ROLE.user, USER_ROLE.admin, USER_ROLE.superAdmin),
+  paymentController.payNowController,
+);
+
+router.get(
+  '/payment',
+  auth(USER_ROLE.user),
+  paymentController.paymentHistoryController,
+);
+
+export const paymentRouter = router;
