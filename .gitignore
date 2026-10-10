@@ -4,8 +4,3 @@ data.json
 .vercel
 dist
 docker-instraction.txt
-# --- 
-README.md
-tsconfig.json
-version.json
-package.json
