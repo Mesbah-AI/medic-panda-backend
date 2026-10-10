@@ -1,155 +1,135 @@
-# 💊 Medic Panda – Online Pharmacy E-Commerce Application (server)
+# 💊 Medic Panda – Online Pharmacy E-Commerce Backend
 
-**Medic Panda** is a modern, scalable backend API for a single-vendor online pharmacy application. It empowers users to browse, purchase, and manage healthcare products seamlessly. Designed with performance, scalability, and security in mind, this backend is built using: **Typescript**, **Node**, **Express**, **Mongoose**, **zod** and **JWT**
+Medic Panda is a modern and scalable backend API for a single-vendor online pharmacy e-commerce application. It enables customers to browse healthcare products, manage their carts, place orders, make secure payments, and manage their accounts.
 
----
+Built with **TypeScript, Node.js, Express.js, MongoDB, Mongoose, Zod, and JWT**, this backend provides secure authentication, product management, order processing, payment integration, and role-based access control.
 
 ## 🔗 Important Links
 
-- 🔴 **Live Demo:** [Visit the frontend](https://medic-panda.vercel.app/)
-- 🧩 **Frontend Code:** [Click Here](https://github.com/Sujoy-Kumar-Das/medic-panda-frontend)
-
----
+- **Live Demo:** [Medic Panda](https://medic-panda.vercel.app/)
+- **Frontend Repository:** [Medic Panda Frontend](https://github.com/Sujoy-Kumar-Das/medic-panda-frontend)
+- **Backend Repository:** [Medic Panda Backend](https://github.com/Mesbah-AI/medic-panda-backend)
 
 ## 🚀 Key Features
 
-### ✅ Robust Authentication System
+### 🔐 Authentication & Authorization
 
-- User registration, login, JWT-based access & refresh tokens(with cookies)
-- Secure email verification and,Reset Password system with OTP
-- Role-based access control (Admin,Super-admin & Customer)
-
----
+- User registration and login
+- JWT-based access and refresh tokens with cookie support
+- Email verification using OTP
+- Password reset functionality
+- Secure password hashing with bcrypt
+- Role-based access control for Admin, Super Admin, and Customer
 
 ### 🛍️ Product Management
 
-- Add, update, delete, and view products
-- Supports product categories, manufacturers, stock, discounts, and reviews
-- Automatically handle discounts status based on time
+- Create, update, delete, and retrieve products
+- Product categorization and manufacturer management
+- Stock and inventory management
+- Product discounts and time-based discount status handling
+- Product reviews and detailed product information
 
----
+### 🛒 Cart & Order Management
 
-### 🔐 📦 Order & Cart System
+- Add, update, and remove cart items
+- Order placement and order history
+- Inventory validation during order processing
+- Secure order processing and payment workflow
+- Admin-managed order status updates
 
-- Cart operations, order placement, order history
-- Inventory validation and secure transaction flow
-- Handle order status by admin
+### ⭐ Reviews & Replies
 
----
-
-### 🗣️ Review & Reply System
-
-- Authenticated users can leave reviews and replies
-- Moderation-ready structure for future enhancements
-
----
+- Authenticated customer reviews
+- Review reply functionality
+- Structured review management for future moderation enhancements
 
 ### 💳 Payment Integration
 
-- Integrated with **SSLCommerz Payment Gateway**
-- Real-time redirection and secure transaction handling
-- Full sandbox and live mode support
+- Integrated with the SSLCommerz payment gateway
+- Secure payment initiation and transaction handling
+- Sandbox and live payment configuration support
+- Payment success, failure, and cancellation callbacks
 - Order status updates based on payment results
 
----
+### 📧 Email & OTP Services
 
-### 🔐 Validation & Error Handling
+- Email verification
+- OTP-based password recovery
+- Configurable email templates and verification redirects
 
-- All routes validated with Zod
-- Global error handler for consistent API responses
+### 🛡️ Validation & Error Handling
 
----
+- Request validation using Zod
+- Centralized error handling middleware
+- Consistent API error responses
+- Environment-based application configuration
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
-| Tool       | Purpose                         |
-| ---------- | ------------------------------- |
-| TypeScript | Strong typing and better dev UX |
-| Express.js | Server framework                |
-| Mongoose   | ODM for MongoDB                 |
-| Zod        | Request/response validation     |
-| JWT        | Authentication & Authorization  |
-| dotenv     | Environment config              |
-| bcrypt     | Password hashing                |
+| Technology | Purpose |
+|---|---|
+| TypeScript | Type safety and maintainable code |
+| Node.js | JavaScript runtime |
+| Express.js | Backend API framework |
+| MongoDB | NoSQL database |
+| Mongoose | MongoDB object modeling |
+| Zod | Data validation |
+| JWT | Authentication and authorization |
+| bcrypt | Password hashing |
+| dotenv | Environment variable management |
+| SSLCommerz | Online payment processing |
 
-## 📁 Project Structure (Frontend)
+## 📁 Project Structure
 
----
-
-## 📁 Project Structure (Frontend)
-
+```text
 src/
-
 ├── app/
-
-│ └── builder/
-
-│ └── config/
-
-│ └── DB/
-
-│ └── emailTemplate/
-
-│ └── errors/
-
-│ └── helpers/
-
-│ └── interface/
-
-│ └── modules/
-
-| | └── admin/
-
-| | └── auth/
-
-| | └── blog/
-
-| | └── cart/
-
-| | └── category/
-
-| | └── customer/
-
-| | └── manufacturer/
-
-| | └── meta/
-
-| | └── orders/
-
-| | └── payment/
-
-| | └── productDetails/
-
-| | └── product/
-
-| | └── review-reply/
-
-| | └── reviews/
-
-| | └── user/
-
-| | └── wishList/
-
-│ └── middlewares/
-
-│ └── routes/
-
-│ └── ssl/
-
-│ └── utils/
-
+├── builder/
+├── config/
+├── DB/
+├── emailTemplate/
+├── errors/
+├── helpers/
+├── interface/
+├── modules/
+│   ├── admin/
+│   ├── auth/
+│   ├── blog/
+│   ├── cart/
+│   ├── category/
+│   ├── customer/
+│   ├── manufacturer/
+│   ├── meta/
+│   ├── orders/
+│   ├── payment/
+│   ├── productDetails/
+│   ├── product/
+│   ├── review-reply/
+│   ├── reviews/
+│   ├── user/
+│   └── wishList/
+├── middlewares/
+├── routes/
+├── ssl/
+├── utils/
 ├── app.ts
-
 └── server.ts
+```
 
----
+## ⚙️ Setup & Installation
 
-## 🌐 Setup & Installation
+### Prerequisites
 
-### 1. Clone the repo
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/)
+- [Git](https://git-scm.com/)
+- MongoDB database (local or cloud)
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Mesbah-AI/medic-panda-backend
+git clone https://github.com/Mesbah-AI/medic-panda-backend.git
 cd medic-panda-backend
 ```
 
@@ -159,29 +139,35 @@ cd medic-panda-backend
 npm install
 ```
 
-### 3. Create .env file
+### 3. Configure Environment Variables
 
-```bash
+Create a `.env` file in the project root and add the following configuration:
+
+```env
 PORT=5000
 db_url=YOUR_MONGODB_URL
 saltRounds=10
+
+# JWT & OTP Secrets
 jwt_access_token=YOUR_ACCESS_SECRET
 jwt_refresh_token=YOUR_REFRESH_SECRET
 otp_token=YOUR_OTP_SECRET
+
+# OTP Verification
 otp_verification_url=
 node_env=development
 
-# SSLCommerz
+# SSLCommerz Configuration
 SSL_URL=https://sandbox.sslcommerz.com/gwprocess/v4/api.php
 SSL_StoreID=YOUR_STORE_ID
 SSL_PASSWORD=YOUR_STORE_PASSWORD
 
-# Payment Callbacks
+# Payment Callback URLs
 ssl_success_url=https://your-backend.com/api/v1/success-payment
 ssl_failed_url=https://your-backend.com/api/v1/failed-payment
 ssl_cancel_url=https://your-backend.com/api/v1/success-cancel
 
-# Frontend Links
+# Frontend URLs
 success_frontend_link=https://your-frontend.com/success-payment
 failed_frontend_link=https://your-frontend.com/failed-payment
 verify_email_frontend_link=https://your-frontend.com/verify-email
@@ -189,7 +175,7 @@ forgot_password_frontend_link=https://your-frontend.com/reset-password
 email_verification_redirect_link=https://your-frontend.com/dashboard/security
 base_frontend_link=https://your-frontend.com/
 
-# Auth Email
+# Authentication Email
 auth_user_email=your@email.com
 auth_user_password=YOUR_APP_PASSWORD
 
@@ -197,24 +183,43 @@ auth_user_password=YOUR_APP_PASSWORD
 jwt_access_token_validation=5m
 jwt_refresh_token_validation=30d
 
-# Admin Setup
+# Super Admin Setup
 supper_admin_email=admin@email.com
-supper_admin_password=YourAdminPassword123
-
+supper_admin_password=CHANGE_THIS_PASSWORD
 ```
 
-### 4. Start Project
+**Important:** Replace all placeholder values with your actual credentials and URLs. Never commit your `.env` file or expose secrets in a public repository.
+
+### 4. Start the Development Server
 
 ```bash
 npm run dev
 ```
 
-Visit the app at: http://localhost:5000
+The backend will run at:
 
----
+```text
+http://localhost:5000
+```
+
+Make sure MongoDB and the required environment variables are configured before starting the application.
+
+## 🔒 Security Notes
+
+- Store credentials and secret keys in environment variables.
+- Use strong, unique JWT and OTP secrets.
+- Keep production payment credentials private.
+- Configure HTTPS and secure cookie settings for production.
+- Use the SSLCommerz sandbox for testing before switching to live mode.
 
 ## 🙋‍♂️ Author
 
 **Mesbah**
 
-- GitHub: [@Mesbah-AI](https://github.com/Mesbah-AI)
+- **GitHub:** [@Mesbah-AI](https://github.com/Mesbah-AI)
+- **Backend Repository:** [medic-panda-backend](https://github.com/Mesbah-AI/medic-panda-backend)
+
+---
+
+If you find this project useful, consider giving the repository a ⭐ on GitHub.
+
