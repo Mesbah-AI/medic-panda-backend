@@ -149,7 +149,7 @@ src/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/Sujoy-Kumar-Das/medic-panda-backend
+git clone https://github.com/Mesbah-AI/medic-panda-backend
 cd medic-panda-backend
 ```
 
@@ -215,10 +215,6 @@ Visit the app at: http://localhost:5000
 
 ## 🙋‍♂️ Author
 
-**Sujoy Kumar Das**
+**Mesbah**
 
-Frontend Developer | React Developer | MERN Stack Enthusiast
-
-- GitHub: [@Sujoy-Kumar-Das](https://github.com/Sujoy-Kumar-Das)
-- LinkedIn: [devsujoykumardas](https://dev-sujoy.vercel.app/)
-- Portfolio: [portfolio](https://dev-sujoy.vercel.app/)
+- GitHub: [@Mesbah-AI](https://github.com/Mesbah-AI)
